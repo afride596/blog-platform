@@ -12,13 +12,13 @@ const Header = () => {
 
         <ul className="flex  text-lg  font-medium gap-10 justify-center items-center  ">
           <li>
-            <Link></Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/about">About </Link>
           </li>
           <li>
-            <Link to="">Contact </Link>
+            <Link to="/contact">Contact </Link>
           </li>
         </ul>
 

@@ -3,22 +3,28 @@ import "./App.css";
 import Header from "./components/Header";
 import AppLayout from "./AppLayout";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 const AppRouting = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
-  },
-  {
-    path: "/about",
-    element: <About />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },{
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 function App() {
   return (
     <RouterProvider router={AppRouting}>
       <div className="App">
-        <Header />
+        <AppLayout />
       </div>
     </RouterProvider>
   );
