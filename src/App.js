@@ -4,17 +4,23 @@ import Header from "./components/Header";
 import AppLayout from "./AppLayout";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Login from "./components/Login";
 
 const AppRouting = createBrowserRouter([
   {
     path: "/",
+    element: <Login />,
+  },
+  {
+    path: "/home",
     element: <AppLayout />,
     children: [
       {
-        path: "/about",
+        path: "about",
         element: <About />,
-      },{
-        path: "/contact",
+      },
+      {
+        path: "contact",
         element: <Contact />,
       },
     ],
